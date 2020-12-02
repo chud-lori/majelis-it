@@ -13,4 +13,9 @@ app.use(express.json());
 // route product
 app.use('/product', productRouter);
 
+// route root
+app.get('/', (req, res) => {
+  res.json({ data: 'Welcome' });
+});
+
 app.listen(port, console.log('listening on port', port));
